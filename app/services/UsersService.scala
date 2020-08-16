@@ -10,7 +10,7 @@ import scala.util.{Success, Using}
 
 
 class UsersService {
-  var usersJsonFile = "app/repositories/users.json"
+  var usersJsonFile: String = getClass.getResource("../resources/users.json").getPath
 
   // Abstracting this for the tests
   def setUsersRepository(jsonFilePath: String): Unit = {
