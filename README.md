@@ -6,7 +6,8 @@ The purpose of this project is to demonstrate the usage of Play framework.
 ## Endpoints
 The current endpoints supported are:
 
-- Default route show welcome play message
+- [Default route](https://users-starter-project.herokuapp.com/) show welcome play message
+- [/users route](https://users-starter-project.herokuapp.com/users) to show the users API data.
 
 
 ## Deployment
