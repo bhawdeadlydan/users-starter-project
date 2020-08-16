@@ -2,6 +2,7 @@ package controllers
 
 import javax.inject._
 import play.api._
+import play.api.libs.json.Json
 import play.api.mvc._
 import services.UsersService
 
@@ -11,7 +12,9 @@ import services.UsersService
  */
 @Singleton
 class HomeController @Inject()(
-                                val controllerComponents: ControllerComponents) extends BaseController {
+                                val controllerComponents: ControllerComponents,
+                              usersService: UsersService
+                              ) extends BaseController {
 
   /**
    * Create an Action to render an HTML page.
@@ -20,7 +23,11 @@ class HomeController @Inject()(
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-  def index() = Action { implicit request: Request[AnyContent] =>
+  def index = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.index())
+  }
+
+  def users = Action { implicit request: Request[AnyContent] =>
+    Ok(Json.toJson(usersService.getAll))
   }
 }
