@@ -45,7 +45,7 @@ class HomeControllerSpec extends PlaySpec with GuiceOneAppPerTest with Injecting
     }
 
     "render the users page from the router" in {
-      val request = FakeRequest(GET, "/users")
+      val request = FakeRequest(GET, "/api/users")
       val home = route(app, request).get
 
       status(home) mustBe OK
