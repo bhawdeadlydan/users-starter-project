@@ -1,0 +1,6 @@
+{
+  "name": "Users Repo",
+  "description": "Users Repo App",
+  "image": "heroku/scala",
+  "addons": [ ]
+}
