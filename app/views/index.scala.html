@@ -1,5 +1,15 @@
 @()
 
-@main("Welcome to Play") {
-  <h1>Welcome to Play!</h1>
+@main("Users List") {
+    <div class="container" >
+        <h1>Users</h1>
+        <p>Users list</p>
+        <hr>
+
+        <ul id="users-list"></ul>
+
+    </div>
+    <script type="text/javascript">
+            loadUsers()
+    </script>
 }
